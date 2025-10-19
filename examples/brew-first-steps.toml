@@ -1,0 +1,5 @@
+schema_version = "0.0.1"
+smith = "saif-shines/hacksmith-blueprints"
+description = """
+A better guide for you to learn using a better package manager and install apps on your MacOS. 
+"""
