@@ -1,13 +1,12 @@
 schema_version = "0.0.1"
 smith = "saif-shines/hacksmith-blueprints"
+
+
+[overview]
+title = "Installs brew and sets auto completions"
 description = """
 A better guide for you to learn using a better package manager and install apps on your MacOS. 
 """
-
-[overview]
-enabled = true
-title = "Installs brew and sets auto completions "
-estimated_time = "60s"
 steps = [
   "Installs brew",
   "Identifies the shell environment",
