@@ -37,7 +37,42 @@ markdown = """
 Brew runs on MacOS only. The future operations hacksmith will execute requires MacOS to set the auto completions.
 """
 save_to = "os"
-options = ["Yes", "No", "Continue"]
+options = ["Yes", "No"]
+
+[agent]
+
+prompt_template = """
+**Task: Configure Homebrew Shell Completion**
+
+Based on the official Homebrew Shell Completion documentation, help me set up shell completion for the `brew` command on my system.
+
+**Context:**
+- Homebrew provides completion definitions for the `brew` command and some packages
+- Supported shells: zsh, bash, fish, and pwsh (PowerShell)
+- Completions are stored under `HOMEBREW_PREFIX` and must be manually configured
+- External Homebrew command completions require running `brew completions link` to opt-in
+
+**What I need:**
+
+1. **Identify my shell:** [Specify your shell: bash/zsh/fish/pwsh, or ask the agent to help determine it]
+
+2. **Provide the appropriate configuration** based on my shell:
+   - For **bash**: Instructions to add completion sourcing to `~/.bash_profile` or `~/.profile`
+   - For **zsh**: Instructions to configure FPATH and compinit in `~/.zshrc` (including Oh My Zsh considerations)
+   - For **fish**: Configuration for `~/.config/fish/config.fish` if not using Homebrew's fish
+   - For **pwsh**: Configuration for PowerShell PROFILE
+
+3. **Troubleshooting guidance** if I encounter:
+   - "zsh compinit: insecure directories" warnings
+   - Need to rebuild zcompdump
+   - Other completion-related issues
+
+4. **Additional steps** for enabling external command completions if needed
+
+Please provide step-by-step instructions specific to my shell environment.
+
+"""
+
 
 
 
