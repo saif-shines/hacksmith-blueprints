@@ -28,7 +28,7 @@ sensitive = false
 primary_docs = "https://docs.brew.sh"
 quickstart_guide = "https://docs.brew.sh/Shell-Completion"
 
-
+[[flows]]
 
 [[flows.steps]]
 type = "choice"
