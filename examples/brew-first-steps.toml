@@ -14,6 +14,11 @@ steps = [
   "Tests the flow"
 ]
 
+[variables.os]
+description = "OS that's being currently operated on"
+required = false
+sensitive = false
+
 [variables.terminal_client]
 description = "Autocompletion is supported in 3 clients — bash, zsh, fish and pwsh"
 required = true
@@ -22,4 +27,17 @@ sensitive = false
 [context.documentation]
 primary_docs = "https://docs.brew.sh"
 quickstart_guide = "https://docs.brew.sh/Shell-Completion"
+
+
+
+[[flows.steps]]
+type = "choice"
+title = "Are you on MacOS?"
+markdown = """
+Brew runs on MacOS only. The future operations hacksmith will execute requires MacOS to set the auto completions.
+"""
+save_to = "os"
+options = ["Yes", "No", "Continue"]
+
+
 
