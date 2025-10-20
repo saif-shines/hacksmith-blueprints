@@ -13,3 +13,13 @@ steps = [
   "Configures completions",
   "Tests the flow"
 ]
+
+[variables.terminal_client]
+description = "Autocompletion is supported in 3 clients — bash, zsh, fish and pwsh"
+required = true
+sensitive = false
+
+[context.documentation]
+primary_docs = "https://docs.brew.sh"
+quickstart_guide = "https://docs.brew.sh/Shell-Completion"
+
